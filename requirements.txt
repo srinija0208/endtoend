@@ -3,3 +3,8 @@ scikit-learn
 numpy
 ipykernal
 seaborn
+
+
+
+
+-e.

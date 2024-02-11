@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 from src.DimondPricePrediction.logger import logging
@@ -9,7 +8,6 @@ import sys
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 from pathlib import Path
-
 
 class DataIngestionConfig:
     raw_data_path:str=os.path.join("artifacts","raw.csv")
@@ -41,10 +39,11 @@ class DataIngestion:
             train_data,test_data=train_test_split(data,test_size=0.25)
             logging.info("train test split completed")
             
-             ## creating dir to access the train and test data config
-             ## saving the train file and test file in artifacts folder
-             ## this is the output of the data ingestion component
+            ## creating dir to access the train and test data config
+            ## saving the train file and test file in artifacts folder
+            ## this is the output of the data ingestion component
            
+
             train_data.to_csv(self.ingestion_config.train_data_path,index=False)
             test_data.to_csv(self.ingestion_config.test_data_path,index=False)
             

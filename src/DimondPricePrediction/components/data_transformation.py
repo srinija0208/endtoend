@@ -27,8 +27,8 @@ def get_data_transformation(self):
             logging.info('Data Transformation initiated')
             
             # Define which columns should be ordinal-encoded and which should be scaled
-            categorical_cols = ['cut', 'color','clarity']
-            numerical_cols = ['carat', 'depth','table', 'x', 'y', 'z']
+            categorical_col = ['cut', 'color','clarity']
+            numerical_col = ['carat', 'depth','table', 'x', 'y', 'z']
             
             # Define the custom ranking for each ordinal variable
             cut_categories = ['Fair', 'Good', 'Very Good','Premium','Ideal']
